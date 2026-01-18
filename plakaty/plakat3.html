@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плакат 3: Алгоритм дій та пам'ятка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        body {
+            background-color: #0a192f;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .plakat {
+            width: 800px;
+            background: linear-gradient(145deg, #0a192f, #0c2340);
+            border: 3px solid #00ff9d;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+        }
+        .grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+            opacity: 0.5;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .header h1 {
+            color: #00ff9d;
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.7);
+        }
+        .header p {
+            text-align: center;
+            color: #cccccc;
+            font-size: 18px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #00ff9d;
+            padding-bottom: 15px;
+        }
+        .algorithm {
+            counter-reset: step;
+            margin-bottom: 30px;
+        }
+        .step {
+            background-color: rgba(20, 40, 70, 0.8);
+            padding: 20px 20px 20px 90px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #00ff9d;
+            position: relative;
+            min-height: 100px;
+        }
+        .step:before {
+            counter-increment: step;
+            content: "КРОК " counter(step);
+            position: absolute;
+            left: 15px;
+            top: 20px;
+            background-color: #00ff9d;
+            color: #0a192f;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            width: 65px;
+            text-align: center;
+        }
+        .step h3 {
+            color: #00ff9d;
+            margin-bottom: 10px;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .step p {
+            color: #e0e0e0;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .extra {
+            background-color: rgba(15, 30, 55, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px dashed #00ff9d;
+        }
+        .extra h2 {
+            color: #00ff9d;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .tips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .tip {
+            background-color: #1a1a2e;
+            color: #00ff9d;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+border: 1px solid #00ff9d;
+            font-size: 16px;
+        }
+        .tip strong {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        .conclusion {
+            background-color: rgba(0, 255, 157, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+            border: 2px solid #00ff9d;
+        }
+        .conclusion p {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #00ff9d;
+            color: #cccccc;
+        }
+        .footer p {
+            margin-bottom: 5px;
+        }
+        .hashtag {
+            color: #00ff9d;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .nav-buttons a {
+            color: #00ff9d;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: 1px solid #00ff9d;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .nav-buttons a:hover {
+            background-color: #00ff9d;
+            color: #0a192f;
+        }
+    </style>
+</head>
+<body>
+    <div class="plakat">
+        <div class="grid"></div>
+        <div class="content">
+            <!-- Навігаційні кнопки -->
+            <div class="nav-buttons">
+                <a href="plakat2.html">← Плакат 2</a>
+                <a href="index.html">НА ГОЛОВНУ</a>
+            </div>
+
+            <div class="header">
+                <h1>АЛГОРИТМ ДІЙ ТА ПАМ'ЯТКА</h1>
+                <p>Покрокова інструкція та додаткові заходи безпеки</p>
+            </div>
+
+            <div class="algorithm">
+                <div class="step">
+                    <h3>ВСТАНОВИ АНТИВІРУС</h3>
+                    <p>Обери надійний антивірус, активуй його та налаштуй автоматичне оновлення. Це твоя базова оборона.</p>
+                </div>
+
+                <div class="step">
+                    <h3>ОНОВЛЮЙ СИСТЕМУ</h3>
+                    <p>Регулярно встановлюй оновлення Windows та усіх програм — це латає діри в безпеці, якими проникають віруси.</p>
+                </div>
+
+                <div class="step">
+                    <h3>БУДЬ УВАЖНИЙ В МЕРЕЖІ</h3>
+                    <p>Не клацай на дивні посилання, не відкривай вкладення від незнайомців. Підозріле = Небезпечне.</p>
+                </div>
+
+                <div class="step">
+                    <h3>РОБИ РЕЗЕРВНІ КОПІЇ</h3>
+                    <p>Зберігай важливі файли на хмарі або зовнішньому диску щонайменше раз на місяць. Навіть якщо вірус вразить — дані будуть цілі.</p>
+                </div>
+            </div>
+
+            <div class="extra">
+                <h2>ДОДАТКОВІ ЗАХОДИ БЕЗПЕКИ</h2>
+                <div class="tips">
+                    <div class="tip">
+                        <strong>ФАЄРВОЛ</strong>
+                        Увімкни брандмауер для контролю мережевого трафіку. Це додатковий фільтр від загроз.
+                    </div>
+                    <div class="tip">
+                        <strong>СКЛАДНИЙ ПАРОЛЬ</strong>
+                        Використовуй мінімум 12 символів: літери, цифри, спецсимволи. Не повторюй паролі на різних сайтах.
+                    </div>
+                    <div class="tip">
+                        <strong>ПЕРЕВІРКА ФЛЕШОК</strong>
+                        Завжди скануй USB-носители антивірусом перед відкриттям. Багато вірусів поширюються саме так.
+                    </div>
+<div class="tip">
+                        <strong>2FA</strong>
+                        Увімкни двофакторну автентифікацію для всіх важливих акаунтів. Навіть якщо пароль викрадуть — не зайдуть.
+                    </div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <p>Дотримання цих правил — 99% захисту від кіберзагроз!</p>
+            </div>
+
+            <div class="footer">
+                <p>ПАМ'ЯТКА З КІБЕРБЕЗПЕКИ | ЧАСТИНА 3/3</p>
+                <p class="hashtag">#БЕЗПЕКА_ПОЧИНАЄТЬСЯ_З_ТЕБЕ</p>
+            </div>
+
+            <!-- Навігаційні кнопки внизу -->
+            <div class="nav-buttons">
+                <a href="plakat2.html">← Плакат 2</a>
+                <a href="index.html">НА ГОЛОВНУ</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
