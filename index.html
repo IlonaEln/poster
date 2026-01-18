@@ -125,6 +125,140 @@
                 width: 90%;
             }
         }
+        /* ==================== АДАПТИВНІСТЬ ГОЛОВНОЇ СТОРІНКИ ==================== */
+
+/* Для планшетів (ширина до 900px) */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .menu-card {
+        width: 100%;
+        max-width: 450px;
+        padding: 25px;
+    }
+    
+    .card-title {
+        min-height: auto;
+        font-size: 22px;
+    }
+    
+    .preview {
+        padding: 25px;
+        margin: 40px 0;
+    }
+    
+    .preview h3 {
+        font-size: 26px;
+    }
+    
+    .preview-list li {
+        font-size: 17px;
+        padding: 9px 0;
+    }
+}
+
+/* Для телефонів (ширина до 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 30px 15px;
+    }
+    
+    .logo {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 35px;
+        padding-bottom: 15px;
+    }
+    
+    .menu-card {
+        padding: 20px 15px;
+        border-width: 1.5px;
+    }
+    
+    .card-number {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .card-desc {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    
+    .preview {
+        padding: 20px 15px;
+        margin: 30px 0;
+    }
+    
+    .preview h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .preview-list li {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+    
+    .preview-list li:before {
+        margin-right: 8px;
+    }
+    
+    footer {
+        margin-top: 40px;
+        padding-top: 15px;
+        font-size: 13px;
+    }
+}
+
+/* Для дуже маленьких телефонів (ширина до 400px) */
+@media (max-width: 400px) {
+    .logo {
+        font-size: 32px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .menu-card {
+        padding: 18px 12px;
+    }
+    
+    .card-title {
+        font-size: 19px;
+    }
+    
+    .card-desc {
+        font-size: 14px;
+    }
+    
+    .preview h3 {
+        font-size: 20px;
+    }
+    
+    .preview-list li {
+        font-size: 14px;
+    }
+}
     </style>
 </head>
 <body>
@@ -169,4 +303,5 @@
         </footer>
     </div>
 </body>
+
 </html>
